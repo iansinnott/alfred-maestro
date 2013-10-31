@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>bundleid</key>
+	<string>iansinnott.keyboardmaestro</string>
+	<key>connections</key>
+	<dict>
+		<key>417EDFE4-EEA3-4586-BACB-72B5CD1488FA</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>47DF9774-B3A1-4F9A-A39C-FDA6FE0DE22A</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+			</dict>
+		</array>
+	</dict>
+	<key>createdby</key>
+	<string>Ian Sinnott</string>
+	<key>description</key>
+	<string>Search Keyboard Maestro Macros</string>
+	<key>disabled</key>
+	<false/>
+	<key>name</key>
+	<string>Keyboard Maestro Macros</string>
+	<key>objects</key>
+	<array>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>argumenttype</key>
+				<integer>1</integer>
+				<key>escaping</key>
+				<integer>62</integer>
+				<key>keyword</key>
+				<string>km</string>
+				<key>runningsubtext</key>
+				<string>Searching Keyboard Maestro...</string>
+				<key>script</key>
+				<string>/usr/local/bin/php -f main.php -- "{query}"</string>
+				<key>subtext</key>
+				<string>Execute Keyboard Maestro Macro</string>
+				<key>title</key>
+				<string>Do Macro</string>
+				<key>type</key>
+				<integer>0</integer>
+				<key>withspace</key>
+				<true/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.input.scriptfilter</string>
+			<key>uid</key>
+			<string>417EDFE4-EEA3-4586-BACB-72B5CD1488FA</string>
+			<key>version</key>
+			<integer>0</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>escaping</key>
+				<integer>127</integer>
+				<key>script</key>
+				<string>-- No error checking to make sure they actually have KM
+-- The passed query is the UID of the macro
+tell application "Keyboard Maestro Engine"
+  do script "{query}"
+end tell</string>
+				<key>type</key>
+				<integer>6</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.script</string>
+			<key>uid</key>
+			<string>47DF9774-B3A1-4F9A-A39C-FDA6FE0DE22A</string>
+			<key>version</key>
+			<integer>0</integer>
+		</dict>
+	</array>
+	<key>readme</key>
+	<string></string>
+	<key>uidata</key>
+	<dict>
+		<key>417EDFE4-EEA3-4586-BACB-72B5CD1488FA</key>
+		<dict>
+			<key>ypos</key>
+			<real>10</real>
+		</dict>
+		<key>47DF9774-B3A1-4F9A-A39C-FDA6FE0DE22A</key>
+		<dict>
+			<key>ypos</key>
+			<real>10</real>
+		</dict>
+	</dict>
+	<key>webaddress</key>
+	<string>http://iansinnott.com</string>
+</dict>
+</plist>
