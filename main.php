@@ -44,16 +44,16 @@ function parse_xml() {
       $macro = array();
       $props = (array)$entry->string;
       if ($entry->key[0] == 'key') {
-        $macro['key'] = $props[0];
+        $macro['uid'] = $props[0];
         $macro['name'] = $props[1];
         $macro['sort'] = $props[2];
-        $macro['uid'] = $props[3];
+        // $macro['uid'] = $props[3];
         $macro['match'] = strtolower($macro['name']);
       } else {
-        $macro['key'] = $props[2];
+        $macro['uid'] = $props[2];
         $macro['name'] = $props[0];
         $macro['sort'] = $props[1];
-        $macro['uid'] = $props[3];
+        // $macro['uid'] = $props[3];
         $macro['match'] = strtolower($macro['name']);
       } // endif
       $macros[] = $macro;
@@ -83,7 +83,7 @@ elseif ($filter) : // If keyword is given, do a filter
         $macro['uid'],
         $macro['uid'],
         $macro['name'],
-        $macro['key'].' '.$macro['name'],
+        $macro['name'],
         'icon.png',
         'yes'
       );
@@ -99,7 +99,7 @@ else : // Return all available macros
       $macro['uid'],
       $macro['uid'],
       $macro['name'],
-      $macro['key'].' '.$macro['name'],
+      $macro['name'],
       'icon.png',
       'yes'
     );
