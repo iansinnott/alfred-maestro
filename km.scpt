@@ -5,5 +5,5 @@ on error err_msg number err_num
 end try
 
 tell application id "com.stairways.keyboardmaestro.engine"
-	gethotkeys with asstring
+	gethotkeys with asstring and getall
 end tell
