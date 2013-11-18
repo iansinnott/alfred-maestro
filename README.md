@@ -30,7 +30,7 @@ Thanks to Peter Lewis of [Stairways Software][stair], the creator of Keyboard Ma
 [stair]: http://www.stairways.com/main/
 
 ## Possible Issues 
-This runs successfully with PHP 5.5.5 (The latest version as of this writing). The XML used to generate the feedback for Alfred was having some issues on a lower version of PHP (5.3.26) when I tested. If you are getting empty results within Alfred then this may be the issue. 
+This should run successfully with PHP 5.3 and above, which is standard on most macs. I think newer macs actually ship with 5.4. If you are getting empty results within Alfred then you may have an issue with an outdated version of PHP. 
 
-To figure out what version of PHP you are running you can try the following command in the Terminal: `/usr/bin/php -v`. You can also run `which php` to see which binary is being used for the command line. 
+To figure out what version of PHP you are running you can try the following command in the Terminal: `php -v`. You can also run `which php` to see which binary is being used for the command line and where it's located.
 
