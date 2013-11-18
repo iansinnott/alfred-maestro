@@ -6,7 +6,7 @@
 // Turning off all error reporting for this script. This is necessary b/c
 // errors get printed to output, and output must be nothing but the
 // alfred standard xml otherwise it doesn't work.
-error_reporting(0);
+// error_reporting(0);
 
 
 require_once 'workflows.php'; // Bring in WorkFlows class
@@ -42,8 +42,13 @@ function parse_xml() {
   foreach ($items as $item){
     foreach ($item->array->dict as $entry){
       $macro = array();
-      $props = (array)$entry->string;
-      if ($entry->key[0] == 'key') {
+      // Originally had (array)$entry->string; but that didn't work 
+      // for some reason in php 5.3.26. Works fine in 5.5.5 though. 
+      // But this workflow is meant to be for everyone so I can hardly
+      // ignore the default version of php that ships with macs.
+      $entry = (array)$entry; // This is the extra step now
+      $props = $entry['string'];
+      if ($entry['key'][0] == 'key') {
         $macro['uid'] = $props[0];
         $macro['name'] = $props[1];
         $macro['sort'] = $props[2];

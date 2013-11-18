@@ -40,7 +40,7 @@
 				<key>runningsubtext</key>
 				<string>Searching Keyboard Maestro...</string>
 				<key>script</key>
-				<string>/usr/local/bin/php -f main.php -- "{query}"</string>
+				<string>php -f main.php -- "{query}"</string>
 				<key>subtext</key>
 				<string>Execute Keyboard Maestro Macro</string>
 				<key>title</key>
