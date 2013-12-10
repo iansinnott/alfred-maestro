@@ -6,8 +6,11 @@
 // Turning off all error reporting for this script. This is necessary b/c
 // errors get printed to output, and output must be nothing but the
 // alfred standard xml otherwise it doesn't work.
-// error_reporting(0);
+error_reporting(0);
 
+// DEBUG
+// var_dump($argc, $argv);
+// die('Those were the vars.');
 
 require_once 'workflows.php'; // Bring in WorkFlows class
 $w = new Workflows;
@@ -21,10 +24,42 @@ $w = new Workflows;
 // php filename.php -- "a string argument"
 // ==> This puts it at $argv[2] b/c 'filename.php' is also passed as an argument.
 $filter = false;
-if ($argc > 0) {
-  $filter = strtolower($argv[1]);
+
+// Make sure we have an arg to search for. When argc == 1 it just shows that 
+// the first arg is the name of the file ('main.php'), which means there is still
+// no argument. If we pass something like php -f main.php -- "" that empty string
+// will register as an arg at argv[1], thus I must handle that case.
+
+
+// This should probably be one statement, will worry about that later.
+if ($argc <= 1) :
+  no_result('Start typing a macro name...', 'No string was given.');
+elseif (!$argv[1]) :
+  no_result('Start typing a macro name...', 'Just type out the name of a macro.');
+endif;
+
+$filter = strtolower($argv[1]);
+
+/**
+ * Function to call if no result is found, or if they enter nothing.
+ * @return xml
+ */
+function no_result($message = '', $submessage = '') {
+  global $w; // Need this to output the messages
+
+  if (!$message) $message = 'No results found.';
+  if (!$submessage) $submessage = 'No macros matched your query.';
+
+  $w->result( 'reeder.result', 'na', $message, $submessage, 'icon.png', 'no' );
+  echo $w->toXML();
+  exit;
 }
 
+/**
+ * This is the meat of the workflow. This takes the unformatted xml from alfred and
+ * parses it into something we can actually use. 
+ * @return array of arrays of macros
+ */
 function parse_xml() {
   $output = array();
   exec('osascript ./km.scpt', $output);
