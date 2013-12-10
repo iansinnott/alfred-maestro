@@ -17,7 +17,7 @@ You will also need a relatively recent version of PHP available for command-line
 
 ## Installation
 
-Download the zip file or clone this repo, then double-click the included 'KeyboardMaestro.alfredworkflow' file to install. 
+Download the zip file or clone this repo, then double-click the included 'AlfredMaestro.alfredworkflow' file to install. 
 
 ## Usage
 
