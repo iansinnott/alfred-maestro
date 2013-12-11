@@ -1,16 +1,10 @@
 #!/usr/bin/php
-<?php // That top line tells php that this is a shell script. It's optional.
-// Also note that mine is a custom setup at: /usr/local/bin/php, but most
-// users probably have their php binary at the location above.
+<?php // The shebang probably not necessarr, but i'm leaving it in. 
 
 // Turning off all error reporting for this script. This is necessary b/c
 // errors get printed to output, and output must be nothing but the
 // alfred standard xml otherwise it doesn't work.
 error_reporting(0);
-
-// DEBUG
-// var_dump($argc, $argv);
-// die('Those were the vars.');
 
 require_once 'workflows.php'; // Bring in WorkFlows class
 $w = new Workflows;
@@ -20,9 +14,10 @@ $w = new Workflows;
 //
 // php -f filename.php -- "a string argument"
 // ==> That command in shell will put the passed string at $argv[1].
+//     $argv[0] holds the name of the file.
 //
 // php filename.php -- "a string argument"
-// ==> This puts it at $argv[2] b/c 'filename.php' is also passed as an argument.
+// ==> This puts it at $argv[2] b/c 'filename.php' and '--' are also passed as arguments.
 $filter = false;
 
 // Make sure we have an arg to search for. When argc == 1 it just shows that 
@@ -47,6 +42,7 @@ $filter = strtolower($argv[1]);
 function no_result($message = '', $submessage = '') {
   global $w; // Need this to output the messages
 
+  // Defaults
   if (!$message) $message = 'No results found.';
   if (!$submessage) $submessage = 'No macros matched your query.';
 
