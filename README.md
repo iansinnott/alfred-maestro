@@ -23,6 +23,10 @@ Download the zip file or clone this repo, then double-click the included 'Alfred
 
 Type `km` followed by the name of any of your defined macros. 
 
+I also wrote a blog post on how I personally use this workflow for anyone who's interested: [Integrating Alfred and Keyboard Maestro][blogpost]
+
+[blogpost]: http://iansinnott.com/blog/integrating-alfred-and-keyboard-maestro/
+
 ![usage example screen](screen.png "Usage Example")
 
 #### Update:
