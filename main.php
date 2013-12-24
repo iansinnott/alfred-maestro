@@ -1,4 +1,4 @@
-#!/usr/bin/php
+#!/usr/bin/env php
 <?php // The shebang probably not necessarr, but i'm leaving it in. 
 
 // Turning off all error reporting for this script. This is necessary b/c
