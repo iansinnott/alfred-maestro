@@ -13,7 +13,7 @@ Alfred 2 (w/ Powerpack) and Keyboard Maestro 6.3 or greater. If you don't have t
 
 Both well worth the cost.
 
-You will also need a relatively recent version of PHP available for command-line use. For anyone running **Mavericks** this shouldn't be a problem. Anyone who's not on Mavericks can run `php -v` within Terminal to see what version they have. See the 'Possible Issues' section bellow for more info.
+You will also need a relatively recent version of PHP available for command-line use. For anyone running **Mavericks or Yosemite** (OSX 10.9 or above) this shouldn't be a problem. Anyone who's not on Mavericks can run `php -v` within Terminal to see what version they have. See the 'Possible Issues' section bellow for more info.
 
 ## Installation
 
