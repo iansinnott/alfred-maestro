@@ -34,6 +34,17 @@ Thanks to Peter Lewis of [Stairways Software][stair], the creator of Keyboard Ma
 [stair]: http://www.stairways.com/main/
 
 ## Possible Issues
+
+### Application Specific Macro Groups
+
+**Important:** If you have macros that you only want to run in certain applications read this.
+
+If you create a macro group that is _not_ set to run in all applications you will need to make sure it is set to run in Alfred 2 in addition to whatever application you want it to run in. See [issue 5][issue5] for details.
+
+[issue5]: https://github.com/iansinnott/alfred-maestro/issues/5
+
+### PHP Version
+
 This should run successfully with PHP 5.3 and above, which is standard on most macs. I think newer macs actually ship with 5.4. If you are getting empty results within Alfred then you may have an issue with an outdated version of PHP.
 
 To figure out what version of PHP you are running you can try the following command in the Terminal: `php -v`. You can also run `which php` to see which binary is being used for the command line and where it's located.
