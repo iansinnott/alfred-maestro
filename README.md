@@ -1,4 +1,4 @@
-# Alfred Maestro
+# Alfred Maestro ([Download][dl])
 
 #### Activate any of your Keyboard Maestro macros in Alfred 2
 
@@ -15,7 +15,9 @@ Both well worth the cost.
 
 ## Installation
 
-Download the zip file or clone this repo, then double-click the included 'AlfredMaestro.alfredworkflow' file to install.
+[Download `AlfredMaestro.alfredworkflow` directly][dl] or clone this repo, then double-click  the `AlfredMaestro.alfredworkflow` file to install.
+
+[dl]: https://github.com/iansinnott/alfred-maestro/raw/master/AlfredMaestro.alfredworkflow
 
 ## Usage
 
