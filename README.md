@@ -15,7 +15,7 @@ Both well worth the cost.
 
 ## Installation
 
-[Download `AlfredMaestro.alfredworkflow` directly][dl] or clone this repo, then double-click  the `AlfredMaestro.alfredworkflow` file to install.
+[Download the file directly][dl] or clone this repo, then double-click  the "AlfredMaestro.alfredworkflow" file to install.
 
 [dl]: https://github.com/iansinnott/alfred-maestro/raw/master/AlfredMaestro.alfredworkflow
 
