@@ -37,6 +37,10 @@ Thanks to Peter Lewis of [Stairways Software][stair], the creator of Keyboard Ma
 
 ## Possible Issues
 
+### Keyboard Maestro 7.0
+
+Everything _should_ still work fine if you are using Keyboard Maestro 7.0, but I haven't done any testing with it. If you are using KM 7.0 and have any issues don't hesitate to [open an issue][new-issue].
+
 ### Application Specific Macro Groups
 
 **Important:** If you have macros that you only want to run in certain applications read this.
@@ -56,3 +60,4 @@ To figure out what version of PHP you are running you can try the following comm
 If you are having trouble, feel free to [open an issue][issues]. I try to check up on it regularly. Alternatively, ping me on Twitter: [@ian_989](https://twitter.com/ian_989)
 
 [issues]: https://github.com/iansinnott/alfred-maestro/issues
+[new-issue]: https://github.com/iansinnott/alfred-maestro/issues/new
