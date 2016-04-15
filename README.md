@@ -57,7 +57,7 @@ To figure out what version of PHP you are running you can try the following comm
 
 ## Troubleshooting
 
-If you are having trouble, feel free to [open an issue][issues]. I try to check up on it regularly. Alternatively, ping me on Twitter: [@ian_989](https://twitter.com/ian_989)
+If you are having trouble, feel free to [open an issue][issues]. I try to check up on it regularly. Alternatively, ping me on Twitter: [@ian_sinn](https://twitter.com/ian_sinn)
 
 [issues]: https://github.com/iansinnott/alfred-maestro/issues
 [new-issue]: https://github.com/iansinnott/alfred-maestro/issues/new
