@@ -1,14 +1,14 @@
 # Alfred Maestro ([Download][dl])
 
-#### Activate any of your Keyboard Maestro macros in Alfred 2
+#### Activate any of your Keyboard Maestro macros in Alfred
 
 This is a workflow for anyone who uses Keyboard Maestro and wishes it had built-in Alfred support. In Alfred simply type `km` followed by the name of any of your KM macros.
 
 ## Requirements
 
-Alfred 2 (w/ Powerpack) and Keyboard Maestro 6.3 or greater. If you don't have them, go get them immediately. You will not regret it.
+Alfred 2 or Alfred 3 (w/ Powerpack) and Keyboard Maestro 6.3 or greater. If you don't have them, go get them immediately. You will not regret it.
 
-- [Alfred 2](http://www.alfredapp.com/) (Free, but requires £17 Powerpack)
+- [Alfred](http://www.alfredapp.com/) (Free, but requires £17 Powerpack)
 - [Keyboard Maestro](http://www.keyboardmaestro.com/main/) (Free to try. $36/license)
 
 Both well worth the cost.
@@ -45,7 +45,7 @@ Everything _should_ still work fine if you are using Keyboard Maestro 7.0, but I
 
 **Important:** If you have macros that you only want to run in certain applications read this.
 
-If you create a macro group that is _not_ set to run in all applications you will need to make sure it is set to run in Alfred 2 in addition to whatever application you want it to run in. See [issue 5][issue5] for details.
+If you create a macro group that is _not_ set to run in all applications you will need to make sure it is set to run in Alfred in addition to whatever application you want it to run in. See [issue 5][issue5] for details.
 
 [issue5]: https://github.com/iansinnott/alfred-maestro/issues/5
 
