@@ -63,6 +63,8 @@ function parse_xml() {
   exec('osascript ./km.scpt', $output);
     if (!$output) return false;
 
+  var_dump($output);
+
   // This comes out as an array of 'lines' of xml.
   $output = join('', $output);
 
@@ -71,7 +73,6 @@ function parse_xml() {
   $items = $xml->array->dict;
 
   $macros = array();
-
   foreach ($items as $item){
     foreach ($item->array->dict as $entry){
       $macro = array();
@@ -121,7 +122,7 @@ elseif ($filter) : // If keyword is given, do a filter
         $macro['uid'],
         $macro['uid'],
         $macro['name'],
-        $macro['name'],
+        $macro['key'], // subtitle
         'icon.png',
         'yes'
       );
@@ -134,10 +135,10 @@ elseif ($filter) : // If keyword is given, do a filter
 else : // Return all available macros
   foreach ($macros as $macro) {
     $w->result(
-      $macro['uid'],
-      $macro['uid'],
-      $macro['name'],
-      $macro['name'],
+      $macro['uid'], // uid
+      $macro['uid'], // arg
+      $macro['name'],// title
+      $macro['key'], // subtitle
       'icon.png',
       'yes'
     );
