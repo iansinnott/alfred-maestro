@@ -23,7 +23,7 @@ Both well worth the cost.
 
 [Download the file directly][dl], then double-click _Alfred Maestro.alfredworkflow_ file to install.
 
-[dl]: https://github.com/maltsev/alfred-maestro/releases/download/0.2.0/Alfred%20Maestro.alfredworkflow
+[dl]: https://github.com/maltsev/alfred-maestro/releases/download/0.2.0/AlfredMaestro.alfredworkflow
 
 ### Installing from sources
 You can also compile and install this workflow from sources.
