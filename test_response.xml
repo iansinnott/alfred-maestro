@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<dict>
+		<key>macros</key>
+		<array>
+			<dict>
+				<key>name</key>
+				<string>Macro #1</string>
+				<key>sort</key>
+				<string>Macro #1</string>
+				<key>uid</key>
+				<string>UID-MACRO-1</string>
+			</dict>
+			<dict>
+				<key>uid</key>
+				<string>UID-MACRO-2</string>
+				<key>name</key>
+				<string>Macro #2</string>
+				<key>sort</key>
+				<string>Macro #2</string>
+			</dict>
+		</array>
+		<key>name</key>
+		<string>Category #1</string>
+		<key>sort</key>
+		<string>Category #1</string>
+		<key>uid</key>
+		<string>UID-CATEGORY-1</string>
+	</dict>
+	<dict>
+        <key>uid</key>
+		<string>UID-CATEGORY-2</string>
+		<key>macros</key>
+		<array>
+			<dict>
+				<key>name</key>
+				<string>Macro #3</string>
+				<key>sort</key>
+				<string>Macro #3</string>
+				<key>uid</key>
+				<string>UID-MACRO-3</string>
+			</dict>
+		</array>
+		<key>name</key>
+		<string>Category #2</string>
+		<key>sort</key>
+		<string>Category #2</string>
+	</dict>
+</array>
+</plist>

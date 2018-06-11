@@ -4,6 +4,8 @@
 <dict>
 	<key>bundleid</key>
 	<string>iansinnott.keyboardmaestro</string>
+	<key>category</key>
+	<string>Tools</string>
 	<key>connections</key>
 	<dict>
 		<key>417EDFE4-EEA3-4586-BACB-72B5CD1488FA</key>
@@ -15,6 +17,8 @@
 				<integer>0</integer>
 				<key>modifiersubtext</key>
 				<string></string>
+				<key>vitoclose</key>
+				<false/>
 			</dict>
 		</array>
 	</dict>
@@ -31,16 +35,34 @@
 		<dict>
 			<key>config</key>
 			<dict>
+				<key>alfredfiltersresults</key>
+				<false/>
+				<key>alfredfiltersresultsmatchmode</key>
+				<integer>0</integer>
+				<key>argumenttrimmode</key>
+				<integer>0</integer>
 				<key>argumenttype</key>
 				<integer>1</integer>
 				<key>escaping</key>
-				<integer>62</integer>
+				<integer>102</integer>
 				<key>keyword</key>
 				<string>km</string>
+				<key>queuedelaycustom</key>
+				<integer>3</integer>
+				<key>queuedelayimmediatelyinitially</key>
+				<true/>
+				<key>queuedelaymode</key>
+				<integer>0</integer>
+				<key>queuemode</key>
+				<integer>2</integer>
 				<key>runningsubtext</key>
 				<string>Searching Keyboard Maestro...</string>
 				<key>script</key>
-				<string>php -f main.php -- "{query}"</string>
+				<string>./alfred-maestro "$1"</string>
+				<key>scriptargtype</key>
+				<integer>1</integer>
+				<key>scriptfile</key>
+				<string></string>
 				<key>subtext</key>
 				<string>Execute Keyboard Maestro Macro</string>
 				<key>title</key>
@@ -55,11 +77,13 @@
 			<key>uid</key>
 			<string>417EDFE4-EEA3-4586-BACB-72B5CD1488FA</string>
 			<key>version</key>
-			<integer>0</integer>
+			<integer>2</integer>
 		</dict>
 		<dict>
 			<key>config</key>
 			<dict>
+				<key>concurrently</key>
+				<false/>
 				<key>escaping</key>
 				<integer>127</integer>
 				<key>script</key>
@@ -68,6 +92,10 @@
 tell application "Keyboard Maestro Engine"
   do script "{query}"
 end tell</string>
+				<key>scriptargtype</key>
+				<integer>0</integer>
+				<key>scriptfile</key>
+				<string></string>
 				<key>type</key>
 				<integer>6</integer>
 			</dict>
@@ -76,7 +104,7 @@ end tell</string>
 			<key>uid</key>
 			<string>47DF9774-B3A1-4F9A-A39C-FDA6FE0DE22A</string>
 			<key>version</key>
-			<integer>0</integer>
+			<integer>2</integer>
 		</dict>
 	</array>
 	<key>readme</key>
@@ -91,15 +119,21 @@ Twitter: @ian_sinn</string>
 	<dict>
 		<key>417EDFE4-EEA3-4586-BACB-72B5CD1488FA</key>
 		<dict>
+			<key>xpos</key>
+			<integer>50</integer>
 			<key>ypos</key>
-			<real>10</real>
+			<integer>30</integer>
 		</dict>
 		<key>47DF9774-B3A1-4F9A-A39C-FDA6FE0DE22A</key>
 		<dict>
+			<key>xpos</key>
+			<integer>270</integer>
 			<key>ypos</key>
-			<real>10</real>
+			<integer>30</integer>
 		</dict>
 	</dict>
+	<key>version</key>
+	<string>0.2.0</string>
 	<key>webaddress</key>
 	<string>http://iansinnott.com</string>
 </dict>
