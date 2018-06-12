@@ -21,6 +21,19 @@
 				<false/>
 			</dict>
 		</array>
+		<key>BFD32886-A59A-4774-B2A0-58CB7956DAF5</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>417EDFE4-EEA3-4586-BACB-72B5CD1488FA</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
 	</dict>
 	<key>createdby</key>
 	<string>Ian Sinnott</string>
@@ -32,6 +45,19 @@
 	<string>Alfred Maestro</string>
 	<key>objects</key>
 	<array>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>triggerid</key>
+				<string>run</string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.trigger.external</string>
+			<key>uid</key>
+			<string>BFD32886-A59A-4774-B2A0-58CB7956DAF5</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
 		<dict>
 			<key>config</key>
 			<dict>
@@ -120,14 +146,21 @@ Twitter: @ian_sinn</string>
 		<key>417EDFE4-EEA3-4586-BACB-72B5CD1488FA</key>
 		<dict>
 			<key>xpos</key>
-			<integer>50</integer>
+			<integer>210</integer>
 			<key>ypos</key>
 			<integer>30</integer>
 		</dict>
 		<key>47DF9774-B3A1-4F9A-A39C-FDA6FE0DE22A</key>
 		<dict>
 			<key>xpos</key>
-			<integer>270</integer>
+			<integer>390</integer>
+			<key>ypos</key>
+			<integer>30</integer>
+		</dict>
+		<key>BFD32886-A59A-4774-B2A0-58CB7956DAF5</key>
+		<dict>
+			<key>xpos</key>
+			<integer>40</integer>
 			<key>ypos</key>
 			<integer>30</integer>
 		</dict>
