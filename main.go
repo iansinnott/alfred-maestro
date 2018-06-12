@@ -23,10 +23,10 @@ func run() {
 	}
 
 	if searchQuery == "" {
-		wf.WarnEmpty("No Keyboard Maestro macros found", "It seems that you haven't created any macro yet.")
+		wf.WarnEmpty("No macros found", "It seems that you haven't created any macros yet.")
 	} else {
 		wf.Filter(searchQuery)
-		wf.WarnEmpty("No Keyboard Maestro macros found that matched your query", "Try a different query?")
+		wf.WarnEmpty("No macros found", "Try a different query.")
 	}
 
 	wf.SendFeedback()
