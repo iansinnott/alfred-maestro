@@ -1,15 +1,38 @@
 package main
 
 import (
+	"time"
+
 	"github.com/deanishe/awgo"
 )
 
 var wf *aw.Workflow
 
 func run() {
-	macros, err := getKmMacros()
+	var kmMacroErr error
+	reload := func() (interface{}, error) {
+		macros, err := getKmMacros()
+		if err != nil {
+			kmMacroErr = err
+		}
+
+		return macros, err
+	}
+
+	// Cache KM macros for 15 seconds
+	maxCache := 15 * time.Second
+	var macros []KmMacro
+	err := wf.Cache.LoadOrStoreJSON("kmMacros", maxCache, reload, &macros)
+
 	if err != nil {
-		wf.Fatal(err.Error())
+		// LoadOrStoreJSON() generates a new error message
+		// Therefore use kmMacroErr to get the original error message
+		if kmMacroErr == nil {
+			wf.Fatal(err.Error())
+		} else {
+			wf.Fatal(kmMacroErr.Error())
+		}
+
 		return
 	}
 
