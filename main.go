@@ -7,8 +7,9 @@ import (
 var wf *aw.Workflow
 
 func run() {
-	macros := getKmMacros()
-	if macros == nil {
+	macros, err := getKmMacros()
+	if err != nil {
+		wf.Fatal(err.Error())
 		return
 	}
 

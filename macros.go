@@ -2,6 +2,7 @@ package main
 
 import (
 	"encoding/xml"
+	"errors"
 	"os"
 	"os/exec"
 	"strings"
@@ -28,7 +29,8 @@ type KmMacro struct {
 	Category string
 }
 
-func getKmMacros() []KmMacro {
+func getKmMacros() ([]KmMacro, error) {
+	// Allow to change the command for fetching macros, so the function could be unit-tested
 	command := os.Getenv("KM_MACROS_FETCH_COMMAND")
 	if command == "" {
 		command = "osascript ./km.scpt"
@@ -37,20 +39,17 @@ func getKmMacros() []KmMacro {
 	out, err := exec.Command("sh", "-c", command).Output()
 
 	if err != nil {
-		wf.Fatal("Unable to get macros from Keyboard Maestro")
-		return nil
+		return nil, errors.New("Unable to get macros from Keyboard Maestro")
 	}
 
 	if !strings.Contains(string(out), "<?xml") {
-		wf.Fatal(string(out))
-		return nil
+		return nil, errors.New(string(out))
 	}
 
 	var categories KmCategories
 	err = xml.Unmarshal(out, &categories)
 	if err != nil {
-		wf.Fatal("Unable to get macros from Keyboard Maestro")
-		return nil
+		return nil, errors.New("Unable to get macros from Keyboard Maestro")
 	}
 
 	var macros []KmMacro
@@ -65,7 +64,7 @@ func getKmMacros() []KmMacro {
 		}
 	}
 
-	return macros
+	return macros, nil
 }
 
 func (item KmItem) getValueByKey(requestedKey string) string {

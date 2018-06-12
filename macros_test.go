@@ -11,8 +11,9 @@ func TestGetKmMacros(t *testing.T) {
 		KmMacro{"UID-MACRO-3", "Macro #3", "Category #2"},
 	}
 
-	actualMacros := getKmMacros()
+	actualMacros, err := getKmMacros()
 
+	assertEqual(t, err, nil)
 	assertEqual(t, len(expectedMacros), len(actualMacros))
 	for i, expectedMacro := range expectedMacros {
 		assertEqual(t, expectedMacro, actualMacros[i])
