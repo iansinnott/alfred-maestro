@@ -23,9 +23,9 @@ type KmCategories struct {
 }
 
 type KmMacro struct {
-	uid      string
-	name     string
-	category string
+	UID      string
+	Name     string
+	Category string
 }
 
 func getKmMacros() []KmMacro {
@@ -58,9 +58,9 @@ func getKmMacros() []KmMacro {
 	for _, category := range categories.Categories {
 		for _, item := range category.Items {
 			macros = append(macros, KmMacro{
-				uid:      item.getValueByKey("uid"),
-				name:     item.getValueByKey("name"),
-				category: category.getValueByKey("name"),
+				UID:      item.getValueByKey("uid"),
+				Name:     item.getValueByKey("name"),
+				Category: category.getValueByKey("name"),
 			})
 		}
 	}

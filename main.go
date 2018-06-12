@@ -13,7 +13,7 @@ func run() {
 	}
 
 	for _, macro := range macros {
-		wf.NewItem(macro.name).UID(macro.uid).Valid(true).Arg(macro.uid)
+		wf.NewItem(macro.Name).UID(macro.UID).Valid(true).Arg(macro.UID)
 	}
 
 	args := wf.Args()
