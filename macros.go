@@ -10,7 +10,7 @@ import (
 
 type KmItem struct {
 	Keys   []string `xml:"key"`
-	Values []string `xml:"string"`
+	Values []string `xml:",any"`
 }
 
 type KmCategory struct {
@@ -77,22 +77,11 @@ func (item KmItem) getValueByKey(requestedKey string) string {
 	return ""
 }
 
-func (category KmCategory) getValueByKey(requestedKey string) string {
-	isMacrosVisited := false
-	for i, key := range category.Keys {
-		if key == "macros" {
-			isMacrosVisited = true
-			if key == requestedKey {
-				break
-			}
-		}
-
+// TODO Find out how to use the same func for both KmItem and KmCategory
+func (item KmCategory) getValueByKey(requestedKey string) string {
+	for i, key := range item.Keys {
 		if key == requestedKey {
-			if isMacrosVisited {
-				i--
-			}
-
-			return category.Values[i]
+			return item.Values[i]
 		}
 	}
 
