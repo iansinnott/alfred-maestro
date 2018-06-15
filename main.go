@@ -11,9 +11,15 @@ var wf *aw.Workflow
 func run() {
 	var kmMacroErr error
 	reload := func() (interface{}, error) {
-		macros, err := getKmMacros()
+		macrosIndex, err := getKmMacros()
+
 		if err != nil {
 			kmMacroErr = err
+		}
+
+		var macros []KmMacro
+		for _, macro := range macrosIndex {
+			macros = append(macros, macro)
 		}
 
 		return macros, err
@@ -36,8 +42,12 @@ func run() {
 		return
 	}
 
+	var item *aw.Item
 	for _, macro := range macros {
-		wf.NewItem(macro.Name).UID(macro.UID).Valid(true).Arg(macro.UID)
+		item = wf.NewItem(macro.Name).UID(macro.UID).Valid(true).Arg(macro.UID)
+		if macro.Hotkey != "" {
+			item.Subtitle(macro.Hotkey)
+		}
 	}
 
 	args := wf.Args()

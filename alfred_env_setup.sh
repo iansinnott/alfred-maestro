@@ -13,4 +13,6 @@ export alfred_workflow_data="$HOME/Library/Application Support/Alfred 3/Workflow
 export alfred_workflow_name="AwGo"
 export alfred_workflow_uid="user.workflow.4B0E9731-E139-4179-BC50-D7FFF82B269A"
 export alfred_workflow_version="0.13"
-export KM_MACROS_FETCH_COMMAND="cat ./test_response.xml"
+
+export GET_ALL_KM_MACROS_COMMAND="cat ./test_all_km_macros.xml"
+export GET_HOTKEY_KM_MACROS_COMMAND="cat ./test_hotkey_km_macros.xml"
