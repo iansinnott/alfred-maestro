@@ -4,20 +4,38 @@
 
 This is a workflow for anyone who uses Keyboard Maestro and wishes it had built-in Alfred support. In Alfred simply type `km` followed by the name of any of your KM macros.
 
+
+
 ## Requirements
 
-Alfred 2 or Alfred 3 (w/ Powerpack) and Keyboard Maestro 6.3 or greater. If you don't have them, go get them immediately. You will not regret it.
+Alfred 3 with Powerpack and Keyboard Maestro 6.3 or greater.
+If you don't have them, go get them immediately.
+You will not regret it.
 
 - [Alfred](http://www.alfredapp.com/) (Free, but requires £17 Powerpack)
 - [Keyboard Maestro](http://www.keyboardmaestro.com/main/) (Free to try. $36/license)
 
 Both well worth the cost.
 
+
+
 ## Installation
 
-[Download the file directly][dl] or clone this repo, then double-click  the "AlfredMaestro.alfredworkflow" file to install.
+[Download the file directly][dl], then double-click _Alfred Maestro.alfredworkflow_ file to install.
 
-[dl]: https://github.com/iansinnott/alfred-maestro/raw/master/AlfredMaestro.alfredworkflow
+[dl]: https://github.com/maltsev/alfred-maestro/releases/download/0.2.0/AlfredMaestro.alfredworkflow
+
+### Installing from sources
+You can also compile and install this workflow from sources.
+It's written in [Go](https://golang.org/), so you should install it first.
+
+1. Clone this repository
+2. Install [AwGo library](https://github.com/deanishe/awgo): `go get github.com/deanishe/awgo`
+3. Run `make pack`
+4. Double-click _Alfred Maestro.alfredworkflow_ file to install the workflow.
+
+
+
 
 ## Usage
 
@@ -35,11 +53,9 @@ Thanks to Peter Lewis of [Stairways Software][stair], the creator of Keyboard Ma
 
 [stair]: http://www.stairways.com/main/
 
+
+
 ## Possible Issues
-
-### Keyboard Maestro 7.0
-
-Everything _should_ still work fine if you are using Keyboard Maestro 7.0, but I haven't done any testing with it. If you are using KM 7.0 and have any issues don't hesitate to [open an issue][new-issue].
 
 ### Application Specific Macro Groups
 
@@ -49,11 +65,7 @@ If you create a macro group that is _not_ set to run in all applications you wil
 
 [issue5]: https://github.com/iansinnott/alfred-maestro/issues/5
 
-### PHP Version
 
-This should run successfully with PHP 5.3 and above, which is standard on most macs. I think newer macs actually ship with 5.4. If you are getting empty results within Alfred then you may have an issue with an outdated version of PHP.
-
-To figure out what version of PHP you are running you can try the following command in the Terminal: `php -v`. You can also run `which php` to see which binary is being used for the command line and where it's located.
 
 ## Troubleshooting
 
