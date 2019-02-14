@@ -65,6 +65,8 @@ If you create a macro group that is _not_ set to run in all applications you wil
 
 [issue5]: https://github.com/iansinnott/alfred-maestro/issues/5
 
+### _Unable to get macros from Keyboard Maestro_
+If you're using macOS Mojave and get the following error, it's very likely that Alfred doesn't have access to Keyboard Maestro. First, make sure that [Alfred has all needed access to your system](https://www.alfredapp.com/help/getting-started/macos-mojave/#integration). Then check that [Alfred could access Keyboard Maestro](https://user-images.githubusercontent.com/923973/52786326-4213cc00-3063-11e9-85d0-1b58c0ce03ae.png). If after that Alfred still doesn't show you your macros ping us in [#22](https://github.com/iansinnott/alfred-maestro/issues/22) and we'll try to help you.
 
 
 ## Troubleshooting
