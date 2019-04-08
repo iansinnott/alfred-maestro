@@ -20,6 +20,16 @@
 				<key>vitoclose</key>
 				<false/>
 			</dict>
+			<dict>
+				<key>destinationuid</key>
+				<string>6B794F4B-9458-4E04-8F4C-01610BD7D273</string>
+				<key>modifiers</key>
+				<integer>1048576</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
 		</array>
 		<key>BFD32886-A59A-4774-B2A0-58CB7956DAF5</key>
 		<array>
@@ -45,6 +55,33 @@
 	<string>Alfred Maestro</string>
 	<key>objects</key>
 	<array>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>concurrently</key>
+				<false/>
+				<key>escaping</key>
+				<integer>127</integer>
+				<key>script</key>
+				<string>-- No error checking to make sure they actually have KM
+-- The passed query is the UID of the macro
+tell application "Keyboard Maestro Engine"
+  do script "{query}"
+end tell</string>
+				<key>scriptargtype</key>
+				<integer>0</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>type</key>
+				<integer>6</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.script</string>
+			<key>uid</key>
+			<string>47DF9774-B3A1-4F9A-A39C-FDA6FE0DE22A</string>
+			<key>version</key>
+			<integer>2</integer>
+		</dict>
 		<dict>
 			<key>config</key>
 			<dict>
@@ -113,10 +150,9 @@
 				<key>escaping</key>
 				<integer>127</integer>
 				<key>script</key>
-				<string>-- No error checking to make sure they actually have KM
--- The passed query is the UID of the macro
-tell application "Keyboard Maestro Engine"
-  do script "{query}"
+				<string>tell application "Keyboard Maestro"
+  editMacro "{query}"
+  activate
 end tell</string>
 				<key>scriptargtype</key>
 				<integer>0</integer>
@@ -128,7 +164,7 @@ end tell</string>
 			<key>type</key>
 			<string>alfred.workflow.action.script</string>
 			<key>uid</key>
-			<string>47DF9774-B3A1-4F9A-A39C-FDA6FE0DE22A</string>
+			<string>6B794F4B-9458-4E04-8F4C-01610BD7D273</string>
 			<key>version</key>
 			<integer>2</integer>
 		</dict>
@@ -156,6 +192,13 @@ Twitter: @ian_sinn</string>
 			<integer>390</integer>
 			<key>ypos</key>
 			<integer>30</integer>
+		</dict>
+		<key>6B794F4B-9458-4E04-8F4C-01610BD7D273</key>
+		<dict>
+			<key>xpos</key>
+			<integer>390</integer>
+			<key>ypos</key>
+			<integer>170</integer>
 		</dict>
 		<key>BFD32886-A59A-4774-B2A0-58CB7956DAF5</key>
 		<dict>
