@@ -40,6 +40,7 @@ It's written in [Go](https://golang.org/), so you should install it first.
 ## Usage
 
 Type `km` followed by the name of any of your defined macros.
+Use <kbd>⌘</kbd> modifier to reveal the macro in Keyboard Maestro.
 
 I also wrote a blog post on how I personally use this workflow for anyone who's interested: [Integrating Alfred and Keyboard Maestro][blogpost]
 
