@@ -45,6 +45,7 @@ func run() {
 	var item *aw.Item
 	for _, macro := range macros {
 		item = wf.NewItem(macro.Name).UID(macro.UID).Valid(true).Arg(macro.UID)
+		item.NewModifier("cmd").Subtitle("Reveal macro in Keyboard Maestro").Arg(macro.UID)
 		if macro.Hotkey != "" {
 			item.Subtitle(macro.Hotkey)
 		}
