@@ -1,6 +1,6 @@
 # Alfred Maestro ([Download][dl])
 
-**⚠️WARNING:** This may not work in Catalina. See [#25](https://github.com/iansinnott/alfred-maestro/issues/25).
+**⚠️WARNING:** This may not work on Big Sur. See [#26](https://github.com/iansinnott/alfred-maestro/issues/26).
 
 #### Activate any of your Keyboard Maestro macros in Alfred
 
