@@ -1,7 +1,5 @@
 # Alfred Maestro ([Download][dl])
 
-**⚠️WARNING:** This may not work on Big Sur. See [#26](https://github.com/iansinnott/alfred-maestro/issues/26).
-
 #### Activate any of your Keyboard Maestro macros in Alfred
 
 This is a workflow for anyone who uses Keyboard Maestro and wishes it had built-in Alfred support. In Alfred simply type `km` followed by the name of any of your KM macros.
