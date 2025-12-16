@@ -44,7 +44,7 @@ Use <kbd>⌘</kbd> modifier to reveal the macro in Keyboard Maestro.
 
 I also wrote a blog post on how I personally use this workflow for anyone who's interested: [Integrating Alfred and Keyboard Maestro][blogpost]
 
-[blogpost]: http://blog.iansinnott.com/integrating-alfred-and-keyboard-maestro/
+[blogpost]: http://notes.iansinnott.com/blog/posts/Integrating+Alfred+With+Keyboard+Maestro
 
 ![usage example screen](screen.png "Usage Example")
 
